@@ -1,10 +1,14 @@
 import React from 'react'
+import LeftMainContent from './LeftMainContent'
+import RightBar from './RightBar'
 
 function MainContent() {
   return (
-    <div className='main-content'>
-        <h2>This is main content.</h2>
+    <div className='content-wrapper'>
+      <LeftMainContent />
+      <RightBar/>
     </div>
   )
 }
+
 export default MainContent

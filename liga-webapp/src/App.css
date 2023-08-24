@@ -1,53 +1,64 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
+
+html {
+  font-size: 22px;
+  font-family: sans-serif;
+  background-color: #eee;
+}
+
+body {
+  background-color: #fefefe;
+  max-width: 1000px;
+  margin: auto;
+  border: 1px solid #333;
+  min-width: 720px;
+}
+
+p, h3{
+  margin-bottom: 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  font-size: medium;
+}
+
+a:hover {
+  color: lightskyblue;
+}
+
+
+
+span {
+  color: rgb(234, 18, 18);
+  font-size: 50px;
+}
+
 
 .App {
-  text-align: center;
   display: flex;
+  width: 100%;
+  max-width: 1000px;
   flex-direction: column;
-  height: 100vh;
-
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 
 .navbar {
-  border: solid #0c0c0c;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width:100%;
+  max-width: inherit;
+  top: 0;
+  border: 1px solid #0c0c0c;
   margin-bottom: 10px;
   padding: 20px;
   background-color: #282c34;
@@ -55,16 +66,224 @@
 }
 
 .main-content {
-  flex-grow: 1;
-  align-items: center;
-  height: 1000px;
+  width: 700px;
+  display: inline-block;
+  vertical-align: top;
 
 }
 
+.main-content-links {
+  text-align: center;
+  background-color: #282c34;
+}
+
+.link-container {
+  display: inline-block;
+  padding: 0.5rem;
+}
+
+.news-content {
+  width: 720px;
+  display: inline-block;
+  padding: 1rem 1rem;
+  padding-left: 1rem;
+  padding-bottom: 100px;
+  padding-top: 170px;
+  vertical-align: top;
+}
+
+.right-bar {
+  position: fixed;
+  background-color: white;
+  top:172px;
+  width: 260px;
+  min-height: 90vh;
+  display: inline-block;
+  border-left: 1px solid #0c0c0c;
+  text-align: center;
+  padding: 1rem 1rem;
+  padding-top: 3.3rem;
+  padding-left: 2rem;
+ 
+}
+
 .footer {
-  position: sticky;
-  bottom: 0px;
+  text-align: center;
+  width:100%;
+  max-width: inherit;
+  position: fixed;
+  padding: 0.5rem;
+  bottom: 0;
   border: solid #0c0c0c;
   background-color: #282c34;
   color: whitesmoke;
+}
+
+.footer p {
+  margin-bottom: 0;
+  font-size: x-small;
+}
+
+.live-latest-score {
+  text-align: center;
+  position: fixed;
+  width:100%;
+  max-width: inherit;
+  top:90px;
+  border: 1px solid #0c0c0c;
+  margin-bottom: 10px;
+  background-color: #D6FAF7;
+  color: black;
+}
+
+.live-score-container {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 80px;
+  min-height: 80px;
+  padding: 10px;
+  
+  
+}
+
+.news-header {
+  text-align: center;
+}
+
+
+.title-main-rightbar {
+  padding-bottom: 2rem;
+}
+
+.schedule-container {
+  text-align: center;
+  width: 720px;
+  display: inline-block;
+  padding: 1rem 1rem;
+  padding-left: 1.8rem;
+  padding-bottom: 100px;
+  padding-top: 170px;
+  vertical-align: top;
+}
+
+.player-container {
+  text-align: center;
+  width: 720px;
+  display: inline-block;
+  padding: 1rem 1rem;
+  padding-left: 1.8rem;
+  padding-bottom: 100px;
+  padding-top: 170px;
+  vertical-align: top;
+}
+
+.login-button {
+  padding: 0.5rem 1rem;
+  text-align: center;
+  background-color: white;
+  border-radius: 10px;
+  border: none;
+}
+
+.game-recorder{
+  text-align: center;
+  width: 720px;
+  display: inline-block;
+  padding: 1rem 1rem;
+  padding-left: 1.8rem;
+  padding-bottom: 100px;
+  padding-top: 170px;
+  vertical-align: top;
+}
+
+.news-box {
+  background-color: lightgray;
+  border: 1px solid black;
+  margin: 1rem;
+  padding: 1rem;
+  font-size: 0.7rem;
+  border-radius: 10px;
+
+}
+
+.news-title {
+  margin-bottom: 1rem;
+}
+
+.news-text {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* number of lines to show */
+          line-clamp: 3; 
+  -webkit-box-orient: vertical;
+}
+.news-link {
+  text-align: right;
+  margin: 0;
+  font-weight: bold;
+ 
+
+}
+
+.ads-canvas {
+  display: flex;
+  width: 200px;
+  height: 170px;
+  margin-bottom: 1rem;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1rem;
+  background-color: rgb(240, 238, 238);
+}
+
+.canvas-text {
+  font-size: small;
+  color: darkgray;
+}
+
+/* .box-score-grid {
+  display: grid;
+  grid-template-columns: auto auto;
+  padding: 24px;
+  align-items: center;
+  justify-content: center;
+}
+
+.boxscore-grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+
+  padding: 3px;
+  font-size: 8px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+
+}
+
+.box-score-label {
+  margin: auto;
+  
+}
+
+.team-name {
+  border-right: 1px solid #282c34;
+  min-width: 30px;
+} */
+
+.box-score-table {
+  width: 118px;
+  font-size: 12px;
+  padding-left: 5px;
+
+}
+
+.box-score-team-name {
+  text-align: left;
+}
+
+.box-score-table-container {
+  border: 1px solid #282c34;
+  border-radius: 7px;
+  min-height: 30px;
 }

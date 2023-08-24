@@ -3,7 +3,7 @@ import React from 'react'
 function Footer() {
   return (
     <div className='footer'>
-        <h2> Liga Corp.</h2>
+        <p style={{fontWeight:'bolder'}} >Copyright &copy; 2023 | Paliga.com</p>
     </div>
   )
 }
